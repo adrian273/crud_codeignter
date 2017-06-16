@@ -27,4 +27,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
-assets/*.js
+assets/js/*.js

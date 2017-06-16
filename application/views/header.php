@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?=base_url()?>">Home <i class="fa fa-home"></i><span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
                 <form class="form-inline waves-effect waves-light">
