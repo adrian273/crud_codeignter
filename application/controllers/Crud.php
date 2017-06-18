@@ -20,16 +20,24 @@
                 $data_user = array();
                 $data_user['username'] = $username;
                 $data_user['email'] = $email;
-                $this->Crud_Model->add_new_user_model($data_user);
-                $msg[] = array(
-                              'type' => 'success',
-                              'msg' => 'Datos Agregados Exitosamente',
-                              'class' => 'animated tada card-success',
-                              'remove_class' => 'card-danger',
-                              'request' => "<td>$username</td><td>$email</td>"
-                            );
+                $add_new = $this->Crud_Model->add_new_user_model($data_user);
+                if ($add_new !== FALSE){
+                    $msg[] = array(
+                                  'type' => 'success',
+                                  'msg' => 'Datos Agregados Exitosamente',
+                                  'class' => 'animated tada card-success',
+                                  'remove_class' => 'card-danger',
+                                  'request' => "<td>$username</td><td>$email</td>",
+                                  'last_id' => $add_new,
+                                );
+                }
             }
             echo json_encode($msg);
+        }
+
+        public function delete_user(){
+            $id = $this->input->post('ident');
+            $delete = $this->Crud_Model->delete_user_model($id);
         }
     }
 ?>

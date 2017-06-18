@@ -9,7 +9,15 @@
         }
 
         public function add_new_user_model($data){
-            $this->db->insert('user', $data);
+            $insert = $this->db->insert('user', $data);
+            if ($insert) {
+                return $this->db->insert_id();
+            }
+        }
+
+        public function delete_user_model($id){
+            $this->db->where('id_user', $id);
+            $delete = $this->db->delete('user');
         }
     }
 ?>

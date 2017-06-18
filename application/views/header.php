@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="<?=base_url()?>node_modules/mdbootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?=base_url()?>node_modules/mdbootstrap/css/mdb.min.css">
         <link rel="stylesheet" href="<?=base_url()?>assets/css/fonts/css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?=base_url()?>node_modules/sweetalert2/dist/sweetalert2.min.css">
     </head>
     <body>
       <div class="container">
