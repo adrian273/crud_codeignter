@@ -4,7 +4,6 @@
         public function __construct(){
             parent::__construct();
             $this->load->model('Crud_Model');
-            $this->load->library('form_validation');
         }
 
         public function add_new_user(){
@@ -26,7 +25,8 @@
                               'type' => 'success',
                               'msg' => 'Datos Agregados Exitosamente',
                               'class' => 'animated tada card-success',
-                              'remove_class' => 'card-danger'
+                              'remove_class' => 'card-danger',
+                              'request' => "<td>$username</td><td>$email</td>"
                             );
             }
             echo json_encode($msg);

@@ -35,12 +35,12 @@
               Ingresar Nuevo Contacto <i class="fa fa-plus"></i>
           </div>
           <div class="card-block">
-            <!--Card Danger-->
+            <!--Card mensaje(request insert in database)-->
                <div class="card text-center z-depth-1" style="margin-bottom:15px;display:none;" id="box_form">
                    <div class="card-block">
-                       <p class="text-white" id='msg_form'></p><button type="button" class="close" aria-label="Close">
+                       <p class="text-white" id='msg_form'></p><button type="button" class="close" aria-label="Close" id="close">
                          <span aria-hidden="true" style="color:white;">&times;</span>
-                        </button>
+                       </button>
                    </div>
                </div>
             <!--/.Card Danger-->

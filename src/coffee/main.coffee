@@ -22,8 +22,19 @@ class Main
                               .removeClass "#{i.remove_class}"
                               .addClass "#{i.class}"
                       $("#msg_form").text "#{i.msg}"
-                      $("#view_user_get").append "#{i.msg}"
+                      $("#view_user_get").append "
+                          <tr>
+                              #{i.request}
+                              <td><a href='#!'><i class='fa fa-remove'></i></a></button></td>
+                              <td><a href='#!' style='color:red;'><i class='fa fa-pencil'></i></a></td>
+                          </tr>
+                      "
+                      $("#new_user_form").trigger('reset')
             )
             .fail((jqXHR, textStatus, errorThrown)->
                 alert "#{textStatus} : #{errorThrown}"
             )
+
+        #
+        $(".close").click ->
+            $("#box_form").hide()

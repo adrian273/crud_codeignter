@@ -9,7 +9,7 @@
     base_url = "http://localhost/crud_codeignter/";
 
     $(function() {
-      return $("form#new_user_form").submit(function(e) {
+      $("form#new_user_form").submit(function(e) {
         e.preventDefault();
         return $.ajax({
           type: 'GET',
@@ -28,13 +28,17 @@
             } else {
               box_form.show("fast").removeClass("" + i.remove_class).addClass("" + i["class"]);
               $("#msg_form").text("" + i.msg);
-              results.push($("#view_user_get").append("" + i.msg));
+              $("#view_user_get").append("<tr> " + i.request + " <td><a href='#!'><i class='fa fa-remove'></i></a></button></td> <td><a href='#!' style='color:red;'><i class='fa fa-pencil'></i></a></td> </tr>");
+              results.push($("#new_user_form").trigger('reset'));
             }
           }
           return results;
         }).fail(function(jqXHR, textStatus, errorThrown) {
           return alert(textStatus + " : " + errorThrown);
         });
+      });
+      return $(".close").click(function() {
+        return $("#box_form").hide();
       });
     });
 
