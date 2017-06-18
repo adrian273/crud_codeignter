@@ -13,15 +13,15 @@
             <th>Email</th>
           </tr>
         </thead>
-          <tbody>
+          <tbody id="view_user_get">
+            <?php foreach ($view_user as $user): ?>
               <tr>
-                  <?php foreach ($view_user as $user): ?>
                       <td><?=$user->username;?></td>
                       <td><?=$user->email;?></td>
                       <td><a href="#!"><i class="fa fa-remove"></i></a></button></td>
                       <td><a href="#!" style="color:red;"><i class="fa fa-pencil"></i></a></td>
-                  <?php endforeach; ?>
               </tr>
+            <?php endforeach; ?>
           </tbody>
       </table>
   </div>

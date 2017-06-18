@@ -22,6 +22,7 @@ class Main
                               .removeClass "#{i.remove_class}"
                               .addClass "#{i.class}"
                       $("#msg_form").text "#{i.msg}"
+                      $("#view_user_get").append "#{i.msg}"
             )
             .fail((jqXHR, textStatus, errorThrown)->
                 alert "#{textStatus} : #{errorThrown}"

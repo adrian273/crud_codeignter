@@ -27,7 +27,8 @@
               results.push($("#msg_form").text("" + i.msg));
             } else {
               box_form.show("fast").removeClass("" + i.remove_class).addClass("" + i["class"]);
-              results.push($("#msg_form").text("" + i.msg));
+              $("#msg_form").text("" + i.msg);
+              results.push($("#view_user_get").append("" + i.msg));
             }
           }
           return results;

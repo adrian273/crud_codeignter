@@ -18,6 +18,10 @@
                             );
             }
             else {
+                $data_user = array();
+                $data_user['username'] = $username;
+                $data_user['email'] = $email;
+                $this->Crud_Model->add_new_user_model($data_user);
                 $msg[] = array(
                               'type' => 'success',
                               'msg' => 'Datos Agregados Exitosamente',

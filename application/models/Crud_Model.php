@@ -5,7 +5,11 @@
         }
 
         public function view_contact_model(){
-            return $this->db->get('users')->result();
+            return $this->db->get('user')->result();
+        }
+
+        public function add_new_user_model($data){
+            $this->db->insert('user', $data);
         }
     }
 ?>
